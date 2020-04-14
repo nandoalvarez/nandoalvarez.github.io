@@ -1,0 +1,70 @@
+html, body {
+	height: 100%;
+	margin: 0;
+}
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+	.header, .footer, #atras, #adelante { 
+		border: 1px solid red; 
+		display: flex;
+		font-size: 4em;
+  		justify-content: center;
+  		align-items: center;
+	}
+  	
+  	.wrapper > header {
+  		grid-area: header;
+  		background-color: #666699;
+  	} 
+
+  	.wrapper > main {
+  		grid-area: main;
+/*  		background-color: #9494b8;*/
+  	} 
+
+  	.wrapper > nav #atras {
+  		grid-area: atras;
+  	} 
+
+  	.wrapper > nav #adelante {
+  		grid-area: adelante;
+  	}
+
+  	.wrapper > footer {
+  		grid-area: footer;
+  		background-color: #e0e0eb;
+  	} 
+
+	#atras {
+  		background-color: #c2c2d6; /*---no reconocía el color dentro de la declaración de área -----*/
+	}
+
+	#adelante {
+  		background-color:   #d0d0e1; /*---no reconocía el color dentro de la declaración de área -----*/
+	}
+
+	.main {
+  		font-size: 1.5em;
+  		padding: 0 40px 50px 40px;
+	}
+
+	.main p {
+		line-height: 1.5;
+	}
+
+	.wrapper {
+	display: grid; 
+	font-family: 'Roboto', sans-serif;	
+	grid-template-areas: 
+		"header header"
+		"main main"
+		"atras adelante"
+		"footer footer";
+	grid-template-rows: 10vh auto 10vh 10vh;
+	grid-template-columns: 50% 1fr;
+  	position: relative;
+  	min-height: 100%;
+  	overflow: auto;
+  	}
+ }
+
